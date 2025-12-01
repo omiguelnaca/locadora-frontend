@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Nacarato Locadora</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="logo.png" alt="Nacarato Logo" class="logo">
+            <h1>Criar Conta</h1>
+            <h2>Cadastre-se para começar</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="name" required placeholder="Seu nome">
+                </div>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" id="email" required placeholder="seu@email.com">
+                </div>
+                <div class="input-group">
+                    <label>Senha</label>
+                    <input type="password" id="password" required placeholder="••••••">
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p class="footer-text">Já tem conta? <a href="index.html">Fazer Login</a></p>
+        </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

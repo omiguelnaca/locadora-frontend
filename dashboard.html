@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão - Nacarato</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Nacarato" class="header-logo">
+            <div class="user-info">
+                <span id="userNameDisplay">Usuário</span>
+                <button id="btnLogout" class="btn-danger">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Total na Frota</h3>
+                <p id="totalCars">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Disponíveis</h3>
+                <p id="availableCars" style="color: #2ecc71;">0</p>
+            </div>
+        </section>
+
+        <section class="card form-card">
+            <h3>Novo Veículo</h3>
+            <form id="vehicleForm">
+                <div class="form-grid">
+                    <div class="input-group"><label>Marca</label><input type="text" id="marca" placeholder="Ex: Fiat" required></div>
+                    <div class="input-group"><label>Modelo</label><input type="text" id="modelo" placeholder="Ex: Uno" required></div>
+                    <div class="input-group"><label>Ano</label><input type="number" id="ano" placeholder="2024" required></div>
+                    <div class="input-group"><label>Placa</label><input type="text" id="placa" placeholder="ABC-1234" required></div>
+                    <div class="input-group"><label>Cor</label><input type="text" id="cor" placeholder="Ex: Prata"></div>
+                    <div class="input-group"><label>Diária (R$)</label><input type="number" id="diaria" step="0.01" placeholder="0.00" required></div>
+                </div>
+                <button type="submit" class="btn-success">Cadastrar Veículo</button>
+            </form>
+        </section>
+
+        <section>
+            <h3 style="color: white; margin-bottom: 20px; border-left: 5px solid var(--primary-yellow); padding-left: 10px;">
+                Frota Disponível
+            </h3>
+            <div id="vehicleList" class="vehicle-grid">
+                <p style="color: #666;">Carregando frota...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
