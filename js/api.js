@@ -1,7 +1,7 @@
 // js/api.js
 
 // Configuração da URL base da API (Backend)
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://locadora-backend-09r2.onrender.com';
 
 // Função genérica para padronizar todas as chamadas (GET, POST, PUT, DELETE)
 async function fetchAPI(endpoint, method = 'GET', body = null) {
